@@ -4,10 +4,6 @@
     $cat1Name       = 'Maza';
     $cat1Price      = '10';
     $cat1Location   = 'Plovdiv';
-    
-//    $catCollection  = array(
-//        
-//    );
 
     $catNameCollection    = [
         "Maza", "Pisana", "Kotka Kotka", "Dundio", "Obama"
@@ -47,11 +43,6 @@
                 <hr>
                 <?php 
                     
-                    // Alternatives
-                    // $i = $i + 1  <==>  $i += 1 <==> $i++
-                
-                    // for($i = 0; $i < 10; $i = $i + 1) 
-                    // for($i = 0; $i < count($catNameCollection); $i += 1) 
                     for($i = 0; $i < count($catNameCollection); $i++) 
                     {
                         echo $catNameCollection[$i]; // 4 // 5

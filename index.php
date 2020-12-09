@@ -35,6 +35,10 @@
                     <input type="text" name="userage" placeholder="На колко си години ?">
                     <input type="submit" value="Здрасти">
                 </form>
+                
+                <form action="termsandconditions.php" method="POST">
+                    <input type='submit' value='Terms and conditions'>
+                </form>
                <?php endif; ?>
                 
                 

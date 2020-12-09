@@ -1,24 +1,8 @@
 <?php
 session_start();
 
-// CamilCase
-// $isUserLogedIn                  = false; 
-// $webApplicationVisitorUsername  = "";
-
-// var_dump($_GET);
-// var_dump(isset($_GET['username']));
-//if(isset($_GET['username'])) {
-//    $webApplicationVisitorUsername = $_GET['username'];
-//}
-
-// var_dump($_GET);
-// var_dump(isset($_GET['username']));
 if(isset($_POST['username'])) {
-    // $webApplicationVisitorUsername  = $_POST['username'];
-   // $isUserLogedIn                  = true;
-    //$_SESSION['user_name']          = $webApplicationVisitorUsername;
     $_SESSION['user_name']          = $_POST['username'];
-    //$_SESSION['is_user_loged_in']   = $isUserLogedIn;
     $_SESSION['is_user_loged_in']   = true;
 }
 
@@ -50,12 +34,6 @@ function greet_visitor($visitorUsername) {
     
     $visitorGreatingMessageIndex = rand(1, 10);
     
-//    $shouldGreatingBePlesant    =   $visitorGreatingMessageIndex >= 1 && 
-//                                    $visitorGreatingMessageIndex <= 5;
-//    
-//    $shouldGreatingBeRude       =   $visitorGreatingMessageIndex >= 6 && 
-//                                    $visitorGreatingMessageIndex <= 8;
-    
     $shouldGreatingBePlesant    =   $visitorGreatingMessageIndex > 1 && 
                                     $visitorGreatingMessageIndex < 5;
     
@@ -65,16 +43,8 @@ function greet_visitor($visitorUsername) {
     $shouldGreatingBeUsual      =   $visitorGreatingMessageIndex == 9 || 
                                     $visitorGreatingMessageIndex == 10;
     
-    // && -> AND
-    // || -> OR
-    // !  => NOT
     
     if($visitorUsername) {
-        
-//        var_dump($visitorGreatingMessageIndex);
-//        var_dump($shouldGreatingBePlesant);
-//        var_dump($shouldGreatingBeRude);
-//        var_dump($shouldGreatingBeUsual);
         
         if($shouldGreatingBePlesant) {
             echo "<span>Как я караш $visitorUsername</span>";
@@ -132,8 +102,6 @@ function slogan() {
     
     $webApplicationTitle                    = "Fat Cat Web Store";
     application_slogan($webApplicationTitle);
-    // greet_visitor($visitorUsername);
-    // $returnedValueVariable = greet_visitor_greeting($visitorUsername);
     echo greet_visitor_greeting(); // 
 }
 
